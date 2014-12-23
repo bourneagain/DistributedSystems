@@ -1,6 +1,7 @@
 Simulation of Fault­tolerant distributed key­value store
-This project is based on the https://github.com/bourneagain/DistributedSystems/tree/master/GOSSIP_PROTOCOL_SIMULATION distributed systems
-system computer to computer communication system.
+
+Failure Detector:
+This project is based on the https://github.com/bourneagain/DistributedSystems/tree/master/GOSSIP_PROTOCOL_SIMULATION distributed systems computer to computer communication protocol as part of the failure detector layer.
 
 Fault Tolerant : 
 The project uses replication factor of 3 ( SECONDARY,TERTIARY inaddition to the PRIMARY ) and is fault tolerant up to 2 nodes failure.
