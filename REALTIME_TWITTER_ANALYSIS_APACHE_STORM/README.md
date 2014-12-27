@@ -33,6 +33,7 @@ The resulting Topology in code looks like below
 5. [Storm](https://storm.apache.org/)
 
 ## Installation on Ubuntu
+```
 sudo apt-get install default-jdk -y  
 sudo wget http://www.trieuvan.com/apache/incubator/storm/apache-storm-0.9.2-incubating/apache-storm-0.9.2-incubating.zip  
 sudo unzip -o $(pwd)/apache-storm-0.9.2-incubating.zip   
@@ -59,19 +60,20 @@ sudo apt-get install python-software-properties -y
 sudo apt-get install python-pip -y  
 sudo pip install flask  
 sudo pip install redis  
-
+```
 ### Storm installation
 Follow the steps avaialable at (https://storm.apache.org/) for installation
 
 ## Running the project
 ### Start the flask server
+```
 python viz/app.py
+```
 
 ### Package the project and feed it to storm
 Update     "[Your customer key]",        "[Your secret key]",        "[Your access token]",        "[Your access secret]" inside the [TopNTweetTopology.java](https://github.com/bourneagain/DistributedSystems/blob/master/REALTIME_TWITTER_ANALYSIS_APACHE_STORM/src/jvm/udacity/storm/TopNTweetTopology.java) file
-
-mvn package
 ```
+mvn package
 storm jar <PATH_TO_JAR_WITH_DEPENDICIES.jar> <CLASS_TOPNTweetTopology>
 ```
 
