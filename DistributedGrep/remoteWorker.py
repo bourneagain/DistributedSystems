@@ -10,22 +10,17 @@ import subprocess
 import sys
 
 s = socket.socket()         # Create a socket object
-#host = socket.gethostname() # Get local machine name
-#hostip=socket.gethostbyaddr(host)
 host = '' 
 
 port = int(sys.argv[1])
-#sys.exit()
-	# Reserve a port for your service.
 s.bind((host, port))        # Bind to the port
 s.listen(5)                 # Now wait for mac 5client connection.
-#print "SERVER STARTED and listening on " + str(hostip) + ":"+str(port)
 print "SERVER STARTED and listening on " 
 
 while True:
     connection, addr = s.accept()     # Establish connection with client.
     #listening started
-    msg="thank you for connection" 
+    msg="STARTED connection" 
     connection.send(msg)
     try:
         print 'connection from', addr
@@ -35,10 +30,8 @@ while True:
             print 'SERVER : received command "%s"' % remoteCommand
 
 
-            #p = subprocess.Popen(remoteCommand, stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True)
             p = subprocess.Popen(remoteCommand ,stdout=subprocess.PIPE, shell=True)
             out, err = p.communicate()
-            #out=os.system(remoteCommand)
             print out
             connection.sendall(str(out))
             print "============="
