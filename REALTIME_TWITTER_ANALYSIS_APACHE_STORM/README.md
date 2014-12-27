@@ -71,7 +71,9 @@ python viz/app.py
 Update     "[Your customer key]",        "[Your secret key]",        "[Your access token]",        "[Your access secret]" inside the [TopNTweetTopology.java](https://github.com/bourneagain/DistributedSystems/blob/master/REALTIME_TWITTER_ANALYSIS_APACHE_STORM/src/jvm/udacity/storm/TopNTweetTopology.java) file
 
 mvn package
+```
 storm jar <PATH_TO_JAR_WITH_DEPENDICIES.jar> <CLASS_TOPNTweetTopology>
+```
 
 
 
