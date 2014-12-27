@@ -24,7 +24,7 @@ The resulting Topology in code looks like below
 ```
 
 
-## Supporting programs
+## Supporting programs  
 1. [Redis](http://redis.io/)
 2. [Flask](http://flask.pocoo.org/)
 3. [D3](http://d3js.org/)
