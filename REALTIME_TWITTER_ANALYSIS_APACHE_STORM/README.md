@@ -6,7 +6,8 @@ The project helps to visualize the top N(=10) trending hash tags of Twitter in r
 
 ## Project Design
 
-The project is designed by creating the storm topology consisting of a 
+The project is designed by creating the storm topology consisting of a  
+
 1. TweetSpout
 2. ParseTweetBolt which is connected to tweet-spout using shuffleGrouping
 3. CountBolt which is connected to tweet-spout using fieldsGrouping of tweet-word
