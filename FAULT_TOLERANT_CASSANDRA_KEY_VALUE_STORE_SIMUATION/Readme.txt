@@ -1,9 +1,16 @@
-Read the specification document thoroughly at: https://courses.engr.illinois.edu/cs425/fa2014/assignments.html
+Simulation of Fault­tolerant distributed key­value store
 
-Create a high level design covering all scenarios / test cases before you start coding. 
+Failure Detector:
+This project is based on the https://github.com/bourneagain/DistributedSystems/tree/master/GOSSIP_PROTOCOL_SIMULATION distributed systems computer to computer communication protocol as part of the failure detector layer.
 
-How do I run only the CRUD tests ? 
+Fault Tolerant : 
+The project uses replication factor of 3 ( SECONDARY,TERTIARY inaddition to the PRIMARY ) and is fault tolerant up to 2 nodes failure.
 
+Key-value pairs are stored through the process of applying consistent hashing algorithm which evenly distibutes the load over the networks of servers connected over a virtual ring topology. 
+Read / Write access to the system is provided through the selection of a random node ( coordinator ) to which the client requests and receives responses from. 
+The system is designed to emulate Create Read Update and Delete operations.
+
+How to run CRUD
 $ make clean
 $ make
 $ ./Application ./testcases/create.conf
@@ -13,6 +20,3 @@ or
 $ ./Application ./testcases/read.conf
 or
 $ ./Application ./testcases/update.conf
-
-How do I test if my code passes all the test cases ? 
-Run the grader. Check the run procedure in KVStoreGrader.sh
